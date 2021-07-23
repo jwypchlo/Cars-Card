@@ -1,0 +1,133 @@
+$color-sedans: hsl(31, 77%, 52%);
+$color-suvs: hsl(184, 100%, 22%);
+$color-luxury: hsl(179, 100%, 13%);
+
+$color-paragraphs: hsla(0, 0%, 100%, 0.75);
+$color-gray-light: hsl(0, 0%, 95%); //background, headings, buttons
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-gray-light;
+}
+
+.container {
+  max-width: 100rem;
+  min-height: 50rem;
+  display: flex;
+  margin: 18rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+
+  @media screen and (max-width: 614px) {
+    flex-direction: column;
+    max-width: 30rem;
+    min-height: 80rem;
+  }
+}
+
+img {
+  margin-bottom: 2rem;
+  @media screen and (max-width: 614px) {
+    margin-bottom: 3rem;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  color: $color-gray-light;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: $color-paragraphs;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 614px) {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+
+button {
+  position: absolute;
+  bottom: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 50px;
+  padding: 1.5rem 2.5rem;
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 614px) {
+    position: static;
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  &__sedans {
+    color: $color-sedans;
+
+    &:hover {
+      background-color: $color-sedans;
+      color: $color-gray-light;
+      border: 1px solid $color-gray-light;
+      transition: all 0.1s;
+    }
+  }
+
+  &__suvs {
+    color: $color-suvs;
+    
+    &:hover {
+      background-color: $color-suvs;
+      color: $color-gray-light;
+      border: 1px solid $color-gray-light;
+    }
+  }
+
+  &__luxury {
+    color: $color-luxury;
+
+    &:hover {
+      background-color: $color-luxury;
+      color: $color-gray-light;
+      border: 1px solid $color-gray-light;
+    }
+  }
+}
+
+.card {
+  padding: 4rem;
+}
+
+.sedans {
+  background-color: $color-sedans;
+}
+
+.suvs {
+  background-color: $color-suvs;
+}
+
+.luxury {
+  background-color: $color-luxury;
+}
